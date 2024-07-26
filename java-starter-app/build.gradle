@@ -49,7 +49,7 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'hello.world.GreetingApp'
+    mainClass = 'hello.world.Main'
 }
 
 test {
@@ -71,7 +71,7 @@ tasks.named('test') {
 }
 
 tasks.jar {
-    manifest.attributes["Main-Class"] = "hello.world.GreetingApp"
+    manifest.attributes["Main-Class"] = "hello.world.Main"
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
